@@ -1,0 +1,40 @@
+<h1>Démonstration pipes</h1>
+
+<fieldset>
+    <legend>Pipes inégrés</legend>
+    <!-- Uppercase -->
+    <p>original : {{texte}}</p>
+    <p>uppercase : {{texte | uppercase}}</p>
+
+    <!-- Lowercase -->
+    <p>original : {{texte}}</p>
+    <p>uppercase : {{texte | lowercase}}</p>
+
+    <!-- Date -->
+    <p>date (fullDate) : {{date | date:'fullDate'}}</p>
+    <p>date (shortDate) : {{date | date:'shortDate'}}</p>
+    <p>date (mediumDate) : {{date | date:'mediumDate'}}</p>
+
+    <!-- Currency -->
+    <p>prix : {{prix | currency:'EUR'}}</p>
+    <p>prix : {{prix | currency:'USD'}}</p>
+    <p>prix : {{prix | currency:'GBP'}}</p>
+
+    <!-- pourcentage -->
+    <p> pourcentage {{pourcentage | percent}}</p>
+
+    <!-- Décomposition d'objet pour débug -->
+    <p>{{utilisateur | json}}</p>
+
+    <!-- sclice -->
+    <p> liste de fruits : {{fruits}}</p>
+    <p>découpe (1 à 3) : {{fruits | slice:1:3}}</p>
+</fieldset>
+
+<fieldset>
+    <legend>Pipes customs</legend>
+    <p>Prix original : 10000 €</p>
+    <p>Prix avec réduction : {{10000 | reduction:15:'€'}}</p>
+    <p>Chaine : Bonjour</p>
+    <p>Chaine formatée : {{'Bonjour' | formatString}}</p>
+</fieldset>

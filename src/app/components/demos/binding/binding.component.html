@@ -1,0 +1,17 @@
+<div>
+    <h2>Property binding (binding one way)</h2>
+    <p>valeur => {{nom}}</p>
+</div>
+
+<div>
+    <h2>Property bindind (two-way)</h2>
+    <input type="number" [(ngModel)]="nombreTwoWay">
+    <p> nombre : {{nombreTwoWay}}</p>
+</div>
+
+<div>
+    <h2>Event binding + attribute binding</h2>
+    <button (click)="incrementation()" [disabled]="clickPlus">Incrémentation</button>
+    <button (click)="decrementation()" [disabled]="clickMoins">Décrémentation</button>
+    <p>compteur : {{compteur}}</p>
+</div>
