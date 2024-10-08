@@ -1,1 +1,63 @@
-<p>directive works!</p>
+<h1>Démonstrations directives</h1>
+
+<fieldset>
+    <legend>Directive structurelles</legend>
+    <!-- if -->
+    <h3>if</h3>
+    <button (click)="toggle()">Basculer</button>
+
+    <div *ngIf="visible">
+        <p>Je suis visible 😃</p>
+    </div>
+
+    @if (visible) {
+    <p>Je suis visible 😃</p>
+    }
+
+    <!-- switch -->
+    <hr>
+    <h3>switch</h3>
+    <div>
+        <h4>Sélectionner une option</h4>
+        <button (click)="selection('1')">options 1</button>
+        <button (click)="selection('2')">options 2</button>
+        <button (click)="selection('3')">options 3</button>
+        <button (click)="reset()">Reset</button>
+
+        @switch (options) {
+        @case ('1') {
+        <p>Options 1 sélectionnée</p>
+        }
+        @case ('2') {
+        <p>Options 2 sélectionnée</p>
+        }
+        @case ('3') {
+        <p>Options 3 sélectionnée</p>
+        }
+        }
+    </div>
+
+    <!-- for -->
+    <h3>boucle for</h3>
+
+    <ul *ngFor="let fruit of fruits">
+        <li>{{fruit}}</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+        @for (fruit of fruits; track $index){
+            <li>{{fruit}}</li>
+        }
+    </ul>
+
+</fieldset>
+
+<fieldset>
+    <legend>Directives d'attribut</legend>
+    <!-- Utilisation de ngClass -->
+    <p [ngClass]="{special : estSpecial, special2 : estSpecial}">Je suis spécial !!!!</p>
+
+    <p [ngStyle]="{'color': peutValider ? 'green' : 'red'}"> etat validation : {{peutValider ? 'oui' : 'non'}}</p>
+</fieldset>
