@@ -6,6 +6,7 @@ import { PipeComponent } from './components/demos/pipe/pipe.component';
 import { DirectiveComponent } from './components/demos/directive/directive.component';
 import { ListeProduitsComponent } from './components/exos/liste-produits/liste-produits.component';
 import { ParentComponent } from './components/demos/inputOutput/parent/parent.component';
+import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopping.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
         { path: 'inputOutput', component:  ParentComponent}
     ]},
     { path: 'exos', children: [
-        { path: 'directive', component: ListeProduitsComponent }
+        { path: 'directive', component: ListeProduitsComponent },
+        { path: 'inputOutput', component: ShoppingComponent }
     ]}
 ];
 

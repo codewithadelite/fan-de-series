@@ -14,6 +14,9 @@ import { FormatStringPipe } from './tools/pipes/format-string.pipe';
 import { ListeProduitsComponent } from './components/exos/liste-produits/liste-produits.component';
 import { ParentComponent } from './components/demos/inputOutput/parent/parent.component';
 import { EnfantComponent } from './components/demos/inputOutput/enfant/enfant.component';
+import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopping.component';
+import { AffichageComponent } from './components/exos/shoppingList/affichage/affichage.component';
+import { AjoutComponent } from './components/exos/shoppingList/ajout/ajout.component';
 
 @NgModule({
     declarations: [
@@ -27,7 +30,10 @@ import { EnfantComponent } from './components/demos/inputOutput/enfant/enfant.co
         FormatStringPipe,
         ListeProduitsComponent,
         ParentComponent,
-        EnfantComponent
+        EnfantComponent,
+        ShoppingComponent,
+        AffichageComponent,
+        AjoutComponent
     ],
     imports: [
         BrowserModule,
