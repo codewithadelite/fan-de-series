@@ -17,6 +17,8 @@ import { EnfantComponent } from './components/demos/inputOutput/enfant/enfant.co
 import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopping.component';
 import { AffichageComponent } from './components/exos/shoppingList/affichage/affichage.component';
 import { AjoutComponent } from './components/exos/shoppingList/ajout/ajout.component';
+import { LivreServiceComponent } from './components/demos/livre-service/livre-service.component';
+import { AffichageLivreComponent } from './components/demos/livre-service/affichage-livre/affichage-livre.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,9 @@ import { AjoutComponent } from './components/exos/shoppingList/ajout/ajout.compo
         EnfantComponent,
         ShoppingComponent,
         AffichageComponent,
-        AjoutComponent
+        AjoutComponent,
+        LivreServiceComponent,
+        AffichageLivreComponent
     ],
     imports: [
         BrowserModule,

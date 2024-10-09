@@ -1,0 +1,14 @@
+<h1>démonstrations services</h1>
+
+<app-affichage-livre></app-affichage-livre>
+
+<fieldset>
+    <legend>Ajout</legend>
+    <label for="id">Id :</label>
+    <input type="number" id="id" [(ngModel)]="newId" required>
+
+    <label for="titre">Titre :</label>
+    <input type="text" id="titre" [(ngModel)]="newTitre" required>
+
+    <button (click)="ajouterLivre()">Ajouter</button>
+</fieldset>

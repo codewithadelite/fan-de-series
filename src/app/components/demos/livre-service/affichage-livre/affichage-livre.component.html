@@ -1,0 +1,12 @@
+<fieldset>
+    <legend>affichage</legend>
+    @if (livres.length > 0) {
+        <ul>
+            @for (livre of livres; track livre.id) {
+                <li> {{livre.id}} {{livre.titre}}</li>
+            }
+        </ul>
+    } @else {
+        <p>aucun titre présent dans la collection. ⛔</p>
+    }
+</fieldset>
