@@ -11,6 +11,7 @@ import { DirectiveComponent } from './components/demos/directive/directive.compo
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReductionPipe } from './tools/pipes/reduction.pipe';
 import { FormatStringPipe } from './tools/pipes/format-string.pipe';
+import { ListeProduitsComponent } from './components/exos/liste-produits/liste-produits.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { FormatStringPipe } from './tools/pipes/format-string.pipe';
         PipeComponent,
         DirectiveComponent,
         ReductionPipe,
-        FormatStringPipe
+        FormatStringPipe,
+        ListeProduitsComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,23 @@
+<ul>
+    @for (produit of produits; track $index) {
+        <li [ngClass]="{ 'cher': produit.prix > 500}"
+            [ngStyle]="{ color : produit.dateAjout.getFullYear() < anneActuelle ? 'red' : 'green'}">
+            <fieldset>
+                <legend>détails</legend>
+                <p>Nom : {{produit.nom}}</p>
+                <p>Prix : {{produit.prix | currency:'EUR'}} </p>
+                <p>Catégorie : {{produit.categorie}}</p>
+                <p>Date ajout : {{produit.dateAjout | date:'shortDate'}}</p>
+
+                @switch (produit.disponible) {
+                    @case (true) {
+                        <p>statut : Disponible</p>
+                    }
+                    @default {
+                        <p>statut : Indisponible</p>
+                    }
+                }
+            </fieldset>
+        </li>
+    }
+</ul>
