@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReductionPipe } from './tools/pipes/reduction.pipe';
 import { FormatStringPipe } from './tools/pipes/format-string.pipe';
 import { ListeProduitsComponent } from './components/exos/liste-produits/liste-produits.component';
+import { ParentComponent } from './components/demos/inputOutput/parent/parent.component';
+import { EnfantComponent } from './components/demos/inputOutput/enfant/enfant.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +25,9 @@ import { ListeProduitsComponent } from './components/exos/liste-produits/liste-p
         DirectiveComponent,
         ReductionPipe,
         FormatStringPipe,
-        ListeProduitsComponent
+        ListeProduitsComponent,
+        ParentComponent,
+        EnfantComponent
     ],
     imports: [
         BrowserModule,

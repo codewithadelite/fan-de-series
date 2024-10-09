@@ -1,0 +1,10 @@
+<li>
+    <p>Id : {{commande.id}}</p>
+    <p>Nom : {{commande.nom}}</p>
+    <button (click)="supprimer(commande.id)">Delete</button>
+    <button (click)="afficherUpdate(commande.nom)">update nom</button>
+    @if (isUpdate) {
+        <input type="text" [(ngModel)]="newNomCommande">
+        <button (click)="sauvegarde(commande.id)">Valider</button>
+    }
+</li>
