@@ -8,6 +8,7 @@ import { ListeProduitsComponent } from './components/exos/liste-produits/liste-p
 import { ParentComponent } from './components/demos/inputOutput/parent/parent.component';
 import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopping.component';
 import { LivreServiceComponent } from './components/demos/livre-service/livre-service.component';
+import { ShoppingListServiceComponent } from './components/exos/shopping-list-service/shopping-list-service.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
     ]},
     { path: 'exos', children: [
         { path: 'directive', component: ListeProduitsComponent },
-        { path: 'inputOutput', component: ShoppingComponent }
+        { path: 'inputOutput', component: ShoppingComponent },
+        { path: 'service', component: ShoppingListServiceComponent }
     ]}
 ];
 
