@@ -9,7 +9,7 @@ export class ShoppinglistService {
     ]
 
     // get articles
-    getArticles(): any {
+    getArticles(){
         return this.articles
     }
 

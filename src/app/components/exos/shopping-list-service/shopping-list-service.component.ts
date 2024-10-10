@@ -8,12 +8,11 @@ import { of } from 'rxjs';
     styleUrl: './shopping-list-service.component.scss'
 })
 export class ShoppingListServiceComponent {
-    articles: any
+    articles = this._shoppingService.getArticles()
     newArticleNom: string = ""
     newArticleQuantite: number = 1
 
     constructor(private _shoppingService: ShoppinglistService) {
-        this.articles = this._shoppingService.getArticles()
     }
 
     ajouterArticle() {
@@ -30,4 +29,21 @@ export class ShoppingListServiceComponent {
         }
     }
 
+    updateQuantite(nom : string, sensAugmentation : string){
+        const article = this.articles.find(article => article.nom == nom)
+        if (article) {
+            if (sensAugmentation === "+") {
+                this._shoppingService.updateQuantite(nom, article.quantite + 1)
+            }
+            else{
+                this._shoppingService.updateQuantite(nom, article.quantite - 1)
+            }
+            this.articles = this._shoppingService.getArticles()
+        }
+    }
+
+    supprimer(nom : string){
+        this._shoppingService.supprimerArticle(nom)
+        this.articles = this._shoppingService.getArticles()
+    }
 }

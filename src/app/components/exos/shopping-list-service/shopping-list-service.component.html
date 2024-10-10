@@ -5,7 +5,9 @@
         @for (article of articles; track article.nom) {
         <li>
             {{article.nom}} {{article.quantite}}
-
+            <button (click)="updateQuantite(article.nom, '+')">➕</button>
+            <button (click)="updateQuantite(article.nom, '-')">➖</button>
+            <button (click)="supprimer(article.nom)">❌</button>
         </li>
         }
     </ul>
