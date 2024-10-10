@@ -20,6 +20,7 @@ import { AjoutComponent } from './components/exos/shoppingList/ajout/ajout.compo
 import { LivreServiceComponent } from './components/demos/livre-service/livre-service.component';
 import { AffichageLivreComponent } from './components/demos/livre-service/affichage-livre/affichage-livre.component';
 import { ShoppingListServiceComponent } from './components/exos/shopping-list-service/shopping-list-service.component';
+import { FormulaireComponent } from './components/demos/formulaire/formulaire.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import { ShoppingListServiceComponent } from './components/exos/shopping-list-se
         AjoutComponent,
         LivreServiceComponent,
         AffichageLivreComponent,
-        ShoppingListServiceComponent
+        ShoppingListServiceComponent,
+        FormulaireComponent
     ],
     imports: [
         BrowserModule,

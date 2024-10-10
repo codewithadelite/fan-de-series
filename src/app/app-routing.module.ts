@@ -9,6 +9,7 @@ import { ParentComponent } from './components/demos/inputOutput/parent/parent.co
 import { ShoppingComponent } from './components/exos/shoppingList/shopping/shopping.component';
 import { LivreServiceComponent } from './components/demos/livre-service/livre-service.component';
 import { ShoppingListServiceComponent } from './components/exos/shopping-list-service/shopping-list-service.component';
+import { FormulaireComponent } from './components/demos/formulaire/formulaire.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
         { path: 'pipe', component: PipeComponent},
         { path: 'directive', component: DirectiveComponent },
         { path: 'inputOutput', component:  ParentComponent},
-        { path: 'service', component:  LivreServiceComponent}
+        { path: 'service', component:  LivreServiceComponent},
+        { path: 'formulaire', component:  FormulaireComponent}
     ]},
     { path: 'exos', children: [
         { path: 'directive', component: ListeProduitsComponent },
