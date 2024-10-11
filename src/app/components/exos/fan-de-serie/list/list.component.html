@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="mt-4">
+        <h2>Fans List</h2>
+    </div>
+    <div>
+        <app-create></app-create>
+    </div>
+    <table class="table table-bordered table-striped table-hover mt-4">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Date de naissance</th>
+            <th>Séries préférées </th>
+            <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(fan of fans; track fan; let  i = $index) {
+                <tr>
+                    <td>{{ i + 1}}</td>
+                    <td>{{ fan.nom }}</td>
+                    <td>{{ fan.dob.toLocaleDateString() }}</td>
+                    <td>
+                        @for(serie of fan.series; track $index){
+                            @if(serie != ""){
+                                <span class="badge bg-primary me-2">
+                                    {{ serie }}
+                                </span>
+                            }
+                        }
+                    </td>
+                    <td class="align-middle">
+                        <a [routerLink]="[fan.id]"  class="btn btn-sm btn-success me-2">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                        <a [routerLink]="[fan.id, 'update']"class="btn btn-sm btn-success me-2">
+                            <i class="fa fa-pen-to-square"></i>
+                        </a>
+                        <button class="btn btn-sm btn-danger me-2" (click)="delete(fan.id)">    
+                            <i class="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

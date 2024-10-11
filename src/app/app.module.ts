@@ -23,6 +23,10 @@ import { ShoppingListServiceComponent } from './components/exos/shopping-list-se
 import { FormulaireComponent } from './components/demos/formulaire/formulaire.component';
 import { ProfilUserComponent } from './components/demos/routing/profil-user/profil-user.component';
 import { RoutingComponent } from './components/demos/routing/routing/routing.component';
+import { ListComponent } from './components/exos/fan-de-serie/list/list.component';
+import { DetailsComponent } from './components/exos/fan-de-serie/details/details.component';
+import { CreateComponent } from './components/exos/fan-de-serie/create/create.component';
+import { UpdateComponent } from './components/exos/fan-de-serie/update/update.component';
 
 @NgModule({
     declarations: [
@@ -45,7 +49,11 @@ import { RoutingComponent } from './components/demos/routing/routing/routing.com
         ShoppingListServiceComponent,
         FormulaireComponent,
         ProfilUserComponent,
-        RoutingComponent
+        RoutingComponent,
+        ListComponent,
+        DetailsComponent,
+        CreateComponent,
+        UpdateComponent
     ],
     imports: [
         BrowserModule,

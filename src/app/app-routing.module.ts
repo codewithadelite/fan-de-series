@@ -12,6 +12,9 @@ import { ShoppingListServiceComponent } from './components/exos/shopping-list-se
 import { FormulaireComponent } from './components/demos/formulaire/formulaire.component';
 import { RoutingComponent } from './components/demos/routing/routing/routing.component';
 import { ProfilUserComponent } from './components/demos/routing/profil-user/profil-user.component';
+import { ListComponent } from './components/exos/fan-de-serie/list/list.component';
+import { DetailsComponent } from './components/exos/fan-de-serie/details/details.component';
+import { UpdateComponent } from './components/exos/fan-de-serie/update/update.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -28,7 +31,12 @@ const routes: Routes = [
     { path: 'exos', children: [
         { path: 'directive', component: ListeProduitsComponent },
         { path: 'inputOutput', component: ShoppingComponent },
-        { path: 'service', component: ShoppingListServiceComponent }
+        { path: 'service', component: ShoppingListServiceComponent },
+        { path: 'fans', children: [
+            { path: '', component: ListComponent },
+            { path: ':id', component: DetailsComponent },
+            { path: ':id/update', component: UpdateComponent },
+        ]}
     ]}
 ];
 

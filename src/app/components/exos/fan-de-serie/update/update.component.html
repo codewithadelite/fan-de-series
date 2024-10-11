@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="mt-2 mb-2">
+        <div class="mt-2 mt-2">
+            @if(error != ""){
+                <div class="alert alert-danger" role=""alert>
+                    {{ error }}
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+                <label for="nom">Nom</label><br>
+                <input class="form-control" type="text" [(ngModel)] ="nom">
+            </div>
+            <div class="col-lg-2">
+                <label for="dob">Date de naissance</label><br>
+                <input class="form-control" type="date" [(ngModel)] ="dob">
+            </div>
+            <div class="col-lg-5">
+                <label for="series">Séries préférées(Séparé par une virgule ,)</label><br>
+                <input class="form-control" type="text" [(ngModel)] ="series">
+            </div>
+            <div class="col d-flex align-items-end">
+                <button class="btn btn-success w-100" (click)="updateFan()">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
